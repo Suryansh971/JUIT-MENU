@@ -93,7 +93,6 @@ body {
   border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 25px 15px;
@@ -140,3 +139,4 @@ body {
   opacity: 0.9;
   line-height: 1.4;
 }
+
