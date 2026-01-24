@@ -53,7 +53,6 @@ function getCurrentMealStatus() {
   const now = new Date();
   const time = now.getHours() + now.getMinutes()/60;
 
-  // Meal timings based on attached menu
   if(time >= 7.5 && time <= 9.5) return "Current Meal: Breakfast 🥞";
   if(time >= 12 && time <= 14) return "Current Meal: Lunch 🍛";
   if(time >= 19.5 && time <= 21) return "Current Meal: Dinner 🍽️";
@@ -98,3 +97,4 @@ setInterval(() => {
 }, 1000);
 
 init();
+
