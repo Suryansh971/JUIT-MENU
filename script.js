@@ -51,18 +51,31 @@ function updateDateTime() {
 
 function getCurrentMealStatus() {
   const now = new Date();
-  const time = now.getHours() + now.getMinutes()/60;
+  const time = now.getHours() + now.getMinutes() / 60;
 
-  if(time >= 7.5 && time <= 9.5) return "Current Meal: Breakfast 🥞";
-  if(time >= 12 && time <= 14) return "Current Meal: Lunch 🍛";
-  if(time >= 19.5 && time <= 21) return "Current Meal: Dinner 🍽️";
-  if(time >= 21.25 && time <= 21.75) return "Current Meal: Milk 🥛";
+  if (time >= 7.5 && time <= 9.5) return "Current Meal: Breakfast 🥞";
+  if (time >= 12 && time <= 14) return "Current Meal: Lunch 🍛";
+  if (time >= 19.5 && time <= 21) return "Current Meal: Dinner 🍽️";
 
-  if(time < 7.5) return "Next Meal: Breakfast 🥞";
-  if(time < 12.5) return "Next Meal: Lunch 🍛";
-  if(time < 19.5) return "Next Meal: Dinner 🍽️";
+  if (time > 21) return "Tomorrow’s Menu";
 
-  return "Next Meal: Breakfast 🥞";
+  if (time < 7.5) return "Next Meal: Breakfast 🥞";
+  if (time < 12.5) return "Next Meal: Lunch 🍛";
+  if (time < 19.5) return "Next Meal: Dinner 🍽️";
+
+  return "";
+}
+
+function getMenuDay() {
+  const now = new Date();
+  let day = now.getDay();
+  const time = now.getHours() + now.getMinutes() / 60;
+
+  if (time >= 21) {
+    day = (day + 1) % 7;
+  }
+
+  return day;
 }
 
 function loadMenu(day){
@@ -84,7 +97,7 @@ dayButtons.forEach(btn => {
 });
 
 function init(){
-  const today = new Date().getDay();
+  const today = getMenuDay();
   document.querySelector(`[data-day="${today}"]`).classList.add("active");
   loadMenu(today);
   updateDateTime();
@@ -97,4 +110,3 @@ setInterval(() => {
 }, 1000);
 
 init();
-
