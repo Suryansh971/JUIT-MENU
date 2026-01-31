@@ -9,41 +9,42 @@ const dayButtons = document.querySelectorAll(".day-btn");
 
 const menuData = {
   0: {
-    breakfast: ["Samosa / Veg Cutlet", "Macaroni", "Cornflakes", "Bread", "Butter", "Jam", "Milk", "Tea"],
-    lunch: ["Aaloo Tomato Sabji", "Kachori Dal / Mattar", "Curd", "Veg Biryani", "Salad", "Apple Royal"],
-    dinner: ["Choley", "Chilli Nutri / Punjabi Aaloo", "Rice", "Roti - Tandoori & Plain", "Salad", "Green Chutney", "Besan Ladoo", "Hot Milk"]
+    breakfast: ["Burger", "Maggi", "Cornflakes", "Bread", "Butter", "Jam", "Milk", "Tea"],
+    lunch: ["Kachori Dal / Mattar", "Paneer Onion Parantha", "Aaloo Tomato Sabji", "Curd", "Veg Biryani", "Salad", "Orange / Kinnu"],
+    dinner: ["Dal Moong Malka", "Mix Veg", "Egg Curry", "Rice", "Roti - Tandoori & Plain", "Salad", "Suji Halwa", "Hot Milk"]
   },
   1: {
-    breakfast: ["Poori", "Aaloo Sabji", "Omellete", "Dalia", "Bread", "Butter", "Jam", "Tea"],
-    lunch: ["Kadi Chawal", "Mix Veg", "Roti - Tandoori & Plain", "Salad", "Papad", "Kinnu"],
-    dinner: ["Dal Makhani", "Aaloo Beans / Aaloo Gobhi", "Rice", "Roti - Tandoori & Plain", "Mix Corn Salad", "Tomato Soup", "Rice Kheer", "Hot Milk"]
+    breakfast: ["Veg Cutlet", "Pasta", "Dalia", "Omelette", "Bread", "Butter", "Jam", "Ginger Tea", "Apple Royal"],
+    lunch: ["Kadhi Chawal", "Aaloo Methi", "Roti - Tandoori & Plain", "Salad", "Papad"],
+    dinner: ["Dal Makhani", "Mix Veg", "Rice", "Roti - Tandoori & Plain", "Mix Corn Salad", "Green Chutney", "Gulab Jamun", "Hot Milk"]
   },
   2: {
     breakfast: ["Idli", "Sambar", "Vada", "Upma", "Coconut Chutney", "Bread", "Butter", "Jam", "Hot Coffee"],
-    lunch: ["Dal Sabut Masoor", "Palak Paneer", "Boondi Raita", "Rice", "Roti - Tandoori & Plain", "Salad", "Kulfi / Ice Cream"],
-    dinner: ["Dal Arhar", "Mix Veg", "Veg Pulao", "Roti - Tandoori & Plain", "Salad", "Gajar Ka Halwa", "Hot Milk"]
+    lunch: ["Dal Moong Malka", "Soya Chaap", "Boondi Raita", "Rice", "Roti - Tandoori & Plain", "Salad", "Ice Cream"],
+    dinner: ["Dal Arhar", "Aaloo Gobhi", "Veg Biryani", "Roti - Tandoori & Plain", "Salad", "Moong Dal Halwa", "Hot Milk"]
   },
   3: {
-    breakfast: ["Kachori Dal / Mattar", "Aaloo Sabji", "Cornflakes", "Boiled Egg", "Bread", "Butter", "Jam", "Tea", "Milk", "Apple Royal"],
-    lunch: ["Dal Rajmah", "Aaloo Shimla Mirch", "Plain Curd", "Rice", "Roti - Tandoori & Plain", "Mix Corn Salad"],
+    breakfast: ["Poori", "Aaloo Sabji", "Poha", "Cornflakes", "Boiled Egg", "Bread", "Butter", "Jam", "Milk", "Tea", "Banana"],
+    lunch: ["Dal Rajmah", "Aaloo Beans", "Veg Raita", "Rice", "Roti - Tandoori & Plain", "Mix Corn Salad"],
     dinner: ["Dal Moong Sabut", "Shahi Paneer", "Rice", "Roti - Tandoori & Plain", "Salad", "Semiya Kheer", "Hot Milk"]
   },
   4: {
-    breakfast: ["Aaloo Paratha", "Plain Curd", "Pasta", "Dalia", "Bread", "Butter", "Jam", "Tea", "Banana"],
-    lunch: ["Dal Kala Chana", "Aaloo Methi", "Matar with Rice", "Bathua ka Raita", "Roti - Tandoori & Plain", "Salad"],
-    dinner: ["Aaloo Mattar Tomato", "Masala Bhindi", "Veg Biryani", "Roti Missi - Tandoori & Plain", "Mix Veg Soup", "Green Chutney", "Suji Halwa", "Hot Milk"]
+    breakfast: ["Aaloo Parantha", "Curd", "Dalia", "Bread", "Butter", "Jam", "Ginger Tea"],
+    lunch: ["Choley Bhature", "Dahi Vada with Saunth Chutney", "Veg Biryani", "Pickle", "Onion Salad", "Kinnu"],
+    dinner: ["Dal Panchranga / Maharani", "Baingan Bharta / Baingan Masala", "Mattar Pulao", "Roti Missi - Tandoori & Plain", "Mix Corn Salad", "Mix Veg Soup", "Gajar Halwa", "Hot Milk"]
   },
   5: {
-    breakfast: ["Bread Pakoda / Bread Roll", "Veg Semiya", "Cornflakes", "Boiled Egg", "Bread", "Butter", "Jam", "Milk", "Tea"],
-    lunch: ["Choley", "Bhature", "Dahi Vada with Saunth Chutney", "Veg Biryani", "Onion Salad", "Orange"],
-    dinner: ["Veg Manchurian", "Noodles", "Chilli Paneer", "Fried Rice", "Hot & Sour Soup", "Salad", "Gulab Jamun", "Hot Milk"]
+    breakfast: ["Bread Pakora / Bread Roll", "Veg Semiya", "Cornflakes", "Boiled Egg", "Bread", "Butter", "Jam", "Milk", "Tea"],
+    lunch: ["Aaloo Palak Bhujia", "Dal Urad Chana", "Bathua Raita", "Rice", "Roti - Tandoori & Plain", "Papad", "Salad", "Apple Golden"],
+    dinner: ["Dal Masoor Sabut", "Kadai Paneer", "Rice", "Roti - Tandoori & Plain", "Salad", "Rice Kheer", "Hot Milk"]
   },
   6: {
-    breakfast: ["Gobhi Paratha", "Curd", "Maggi", "Daliya", "Bread", "Butter", "Jam", "Hot Coffee", "Apple Golden"],
-    lunch: ["Dal Rajmah", "Mix Veg", "Boondi Raita", "Rice", "Roti - Tandoori & Plain", "Salad"],
-    dinner: ["Dal Moong Malka", "Egg Bhurji / Curry", "Aaloo Gobhi / Baingan Bharta", "Rice", "Roti - Tandoori & Plain", "Mix Corn Salad", "Veg Soup", "Moong Dal Halwa", "Hot Milk"]
+    breakfast: ["Gobhi Parantha", "Macaroni", "Daliya", "Curd", "Pickle", "Bread", "Butter", "Jam", "Hot Coffee", "Banana"],
+    lunch: ["Dal Rajmah", "Aaloo Shimla Mirch", "Boondi Raita", "Rice", "Roti - Tandoori & Plain", "Salad"],
+    dinner: ["Dal Tadka", "Masala Bhindi / Chilli Nutri", "Rice", "Roti - Tandoori & Plain", "Salad", "Fruit Custard", "Hot Milk"]
   }
 };
+
 
 function updateDateTime() {
   dateTimeEl.textContent = new Date().toLocaleString();
@@ -110,3 +111,4 @@ setInterval(() => {
 }, 1000);
 
 init();
+
